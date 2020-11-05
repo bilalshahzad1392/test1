@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: npm install
-    command: npm run start
+    command: npm start
 ports:
-  - port: 8080
+  - port: 1337
     onOpen: open-preview
