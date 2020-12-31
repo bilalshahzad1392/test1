@@ -6,6 +6,10 @@
     "license": "MIT",
     "author": "Microsoft",
     "scripts": {
-        "start": "node index.js"
+        "start": "node index.js",
+        "lint": "eslint 'index.js'"
+    },
+    "devDependencies": {
+        "eslint": "^7.16.0"
     }
 }
