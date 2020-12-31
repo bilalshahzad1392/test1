@@ -18,7 +18,9 @@ jobs:
       
     steps:
     - uses: actions/checkout@v2
-    - name: Use1
-      run: ls
+    - name: install packages
+      run: npm install
+    - name: run linting 
+      run: npm run lint 
     
       
