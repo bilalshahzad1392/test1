@@ -13,9 +13,7 @@ jobs:
     - name: Add Pull Request Reviewer
       uses: uses: kentaro-m/auto-assign-action@v1.1.2
       with:
-        addReviewers: true
-        reviewers:
-          - bilalshahzad1392         
+        configuration-path: ".github/auto_assign.yml"     
         
     
       
