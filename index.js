@@ -5,7 +5,7 @@ const server = http.createServer((request, response) => {
     response.end("Hello World Pakistan 1232 12341324!");
 });
 
-var a =10;
+//var a =10;
 const port = process.env.PORT || 1337;
 server.listen(port);
 
