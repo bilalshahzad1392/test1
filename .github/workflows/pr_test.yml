@@ -14,5 +14,6 @@ jobs:
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
       with: 
         reviewers: "bilalshahzad139"
+        token: ${{ secrets.GITHUB_TOKEN }}
     
       
