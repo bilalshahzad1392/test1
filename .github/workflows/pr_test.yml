@@ -13,7 +13,7 @@ jobs:
     - name: Add Pull Request Reviewer
       uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
       with: 
-        reviewers: "bilalshahzad139"
+        reviewers: "bilalshahzad1392"
         token: ${{ secrets.GITHUB_TOKEN }}
     
       
