@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest     
     steps:
+    - name: test printing 
+      run : |
+        echo $GITHUB_RUN_ID
+        echo $GITHUB_RUN_NUMBER
     - name: Add Pull Request Reviewer
       uses: kentaro-m/auto-assign-action@v1.1.2
       with:
