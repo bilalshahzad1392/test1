@@ -10,10 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest     
     steps:
+    - name: test printing 
+      run : |
+        echo $GITHUB_RUN_ID
+        echo $GITHUB_RUN_NUMBER
     - name: Add Pull Request Reviewer
-      uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
-      with: 
-        reviewers: "bilalshahzad1392"
-        token: ${{ secrets.GITHUB_TOKEN }}
+      uses: kentaro-m/auto-assign-action@v1.1.2
+      with:
+        configuration-path: '.github/auto_assign.yml'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        
     
       
