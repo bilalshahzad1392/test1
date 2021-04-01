@@ -9,4 +9,4 @@ jobs:
         uses: "pascalgn/size-label-action@v0.4.2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          IGNORED: "**/test.json"
+          IGNORED: "**/test.json\n**/test-lock.json"
