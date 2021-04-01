@@ -1,0 +1,38 @@
+
+name: PR-Review-Draft
+
+on:
+  pull_request:
+    branches: [ master ]
+    types: [ready_for_review, opened, synchronize, reopened]
+
+
+  workflow_dispatch:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest     
+    steps:
+    - name: test printing 
+      run : |
+        echo $GITHUB_RUN_ID
+        echo $GITHUB_RUN_NUMBER
+        echo draft-${{ github.event.pull_request.draft}}
+        echo ready_for_review-${{ github.event.pull_request.ready_for_review}}
+        echo opened-${{ github.event.pull_request.opened}}
+        echo reopened-${{ github.event.pull_request.reopened}}
+        echo synchronize-${{ github.event.pull_request.synchronize}}
+    
+    - name: skip testing
+      if: ${{ github.event.pull_request.draft == false }}      
+      run: |
+       echo in skipped
+       echo ${{ github.event.pull_request.draft}}
+       echo ${{ github.workflow_dispatch}}
+      
+
+        
+    
+      
